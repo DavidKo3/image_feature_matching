@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-from LBP import LocalBinaryPatters
+from data.pyimagesearch.localbinarypatterns import LocalBinaryPatterns
 from imutils import paths
 import argparse
 import glob
@@ -65,11 +65,11 @@ radius = 3
 # Number of points to be considered as neighbourers
 no_points = 8 * radius
 
-test_list = sorted(glob.glob("./data/denim/*.*"))
+test_list = sorted(glob.glob("../data/denim/*.*"))
 
 
 # img1 = cv2.imread("./data/deal-tshirt/deal-tshirt-1-3.png", 0)
-img2 = cv2.imread("./data/deal-tshirt/deal-tshirt-1.png")  # train image
+img2 = cv2.imread("../data/deal-tshirt/deal-tshirt-1.png")  # train image
 target_origin = img2.copy()
 img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
@@ -77,8 +77,8 @@ img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 score = dict()
 for test_img in test_list:
     img1= cv2.imread(test_img, 0) #query image
-    img1_lbp = LocalBinaryPatters(no_points, radius).describe(img1)
-    img2_lbp = LocalBinaryPatters(no_points, radius).describe(img2)
+    img1_lbp = LocalBinaryPatterns(no_points, radius).describe(img1)
+    img2_lbp = LocalBinaryPatterns(no_points, radius).describe(img2)
 
     val = cv2.compareHist(np.array(img1_lbp, dtype=np.float32), np.array(img2_lbp, dtype=np.float32),
                             cv2.HISTCMP_CHISQR)
