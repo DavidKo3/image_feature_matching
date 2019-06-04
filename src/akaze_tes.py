@@ -9,11 +9,11 @@ import numpy as np
 # sample_fiilename = "deal-tshirt.jpg"
 
 
-template_path = "../data/refregerator_image/"
-template_filename = "1.jpg"
+template_path = "../data/scrapy_data/neat/"
+template_filename = "[5컬러_니쥬_브이넥_골지_루즈핏_니트]_0_.jpg"
 
-sample_path = "../data/refregerator_image/"
-sample_fiilename = "3.jpg"
+sample_path = "../data/scrapy_data/neat/"
+sample_fiilename = "[5컬러_니쥬_브이넥_골지_루즈핏_니트]_2_.jpg"
 
 
 
