@@ -20,7 +20,7 @@ template_path = "../data/scrapy_data/neat_crop/"
 template_filename = "neat_0.png"
 
 sample_path = "../data/scrapy_data/neat_crop/"
-sample_fiilename = "neat_4.png"
+sample_fiilename = "neat_6.png"
 
 
 
@@ -70,7 +70,14 @@ cv2.waitKey(0)
 
 
 
-
+"""
+(0, 1) - 0.4960498275764364
+(0, 2) - 0.17854044047245363
+(0, 3) - 0.1408230966553197
+(0, 4) - 1.6740270113135365
+(0, 5) - 0.5539901250114654
+(0, 6) - 1.962219243816631
+"""
 
 
 
